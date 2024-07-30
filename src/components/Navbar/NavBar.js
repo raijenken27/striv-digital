@@ -25,7 +25,7 @@ const NavBar = () => {
                     {/* Reference to the logo image in the public folder */}
                     <img src={`${process.env.PUBLIC_URL}/STRIV2.png`} alt="Logo" className="h-10 mr-4" />
                     <HashLink smooth to="/#hero">
-                        <h1 className="font-extrabold text-4xl text-blue-900">STRIV</h1>
+                        <h1 className="font-extrabold text-4xl text-blue-900">striv</h1>
                     </HashLink>
                 </div>
                 <div className="group flex flex-col items-center">
