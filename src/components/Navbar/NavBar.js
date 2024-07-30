@@ -4,26 +4,26 @@ import { HashLink } from 'react-router-hash-link';
 
 const NavBar = () => {
     const [top, setTop] = useState(!window.scrollY);
-    const [isOpen, setisOpen] = React.useState(false);
+    const [isOpen, setisOpen] = useState(false);
 
     function handleClick() {
         setisOpen(!isOpen);
     }
 
     useEffect(() => {
-      const scrollHandler = () => {
-        window.pageYOffset > 10 ? setTop(false) : setTop(true);
-      };
-      window.addEventListener('scroll', scrollHandler);
-      return () => window.removeEventListener('scroll', scrollHandler);
+        const scrollHandler = () => {
+            window.pageYOffset > 10 ? setTop(false) : setTop(true);
+        };
+        window.addEventListener('scroll', scrollHandler);
+        return () => window.removeEventListener('scroll', scrollHandler);
     }, [top]);
 
     return (
         <nav className={`fixed top-0 w-full z-30 transition duration-300 ease-in-out mb-16 ${!top && 'bg-white shadow-lg'}`}>
             <div className="flex flex-row justify-between items-center py-2">
                 <div className="flex flex-row items-center md:px-12 md:mx-12">
-                    {/* Add your logo image here */}
-                    <img src="path/to/your/logo.png" alt="Logo" className="h-10 mr-4" />
+                    {/* Reference to the logo image in the public folder */}
+                    <img src={`${process.env.PUBLIC_URL}/STRIV.png`} alt="Logo" className="h-10 mr-4" />
                     <HashLink smooth to="/#hero">
                         <h1 className="font-extrabold text-4xl text-blue-900">STRIV</h1>
                     </HashLink>
