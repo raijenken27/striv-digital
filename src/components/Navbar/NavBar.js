@@ -23,9 +23,9 @@ const NavBar = () => {
             <div className="flex flex-row justify-between items-center py-2">
                 <div className="flex flex-row items-center md:px-12 md:mx-12">
                     {/* Reference to the logo image in the public folder */}
-                    <img src={`${process.env.PUBLIC_URL}/STRIV2.png`} alt="Logo" className="h-10 mr-4" />
+                    <img src={`${process.env.PUBLIC_URL}/STRIV3.png`} alt="Logo" className="h-10 mr-4" />
                     <HashLink smooth to="/#hero">
-                        <h1 className="font-extrabold text-4xl" style={{ color: '#5d2cae' }}>striv</h1>
+                        <h1 className="font-extrabold text-4xl text-blue-900">striv</h1>
                     </HashLink>
                 </div>
                 <div className="group flex flex-col items-center">
